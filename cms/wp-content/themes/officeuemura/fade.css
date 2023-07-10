@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+#slide {
+	margin:0 auto;
+	position: relative;
+	top:-15px;
+	left:0px;
+	z-index:0 !important;
+}
+#slide img {
+	position:absolute;
+	left:0;
+	top:0;
+	width:960px;
+}
+.top-link{
+	width:960px;
+	height:370px;
+	position:absolute;
+	z-index:9999 !important;
+	right:0px;
+	top:0px;
+}
+
+.top-link a:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha(opacity=70)";
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+/* 768pxまでの幅の場合に適応される */
+
+}

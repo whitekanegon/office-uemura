@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/* 
+Theme Name:上村労務管理事務所
+*/
+
+//wp-memberts
+#contents {
+  #wpmem_login,
+  #wpmem_reg {
+    legend {
+      color: #213863;
+      font-size: 18px;
+      margin-bottom: 1em;
+    }
+    label {
+      font-size: 14px;
+    }
+    .div_text,
+    .req-text {
+      font-size: 14px;
+      margin: 5px 0 15px;
+    }
+    input[type="submit"] {
+      font-size: 14px;
+      color: #213863;
+      padding: 3px 20px;
+    }
+  }
+  .title-b + ul:not(.movie_list) {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 30px 5px;
+    li {
+      border-left: 2px solid #ccc;
+      padding-left: 12px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+//ダウンロード
+#contents {
+  .download {
+    section {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: dotted 1px #ccc;
+      &:last-child {
+        border-bottom: none;
+      }
+      h3 {
+        font-size: 18px;
+        color: #213863;
+        margin: 0;
+        .icon {
+          display: inline-block;
+          vertical-align: bottom;
+          margin-left: 10px;
+          width: 30px;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      p {
+        margin: 10px 0 0 0;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//解説動画
+#contents {
+  .movie_cat {
+    font-size: 14px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0 10px;
+    span {
+      white-space: nowrap;
+      display: block;
+      background: #213863;
+      color: #FFF;
+      font-size: 12px;
+      text-align: center;
+      padding: 2px 10px;
+    }
+    & + .youtube {
+      margin-top: 20px;
+    }
+  }
+
+  .movie {
+    margin-top: 30px;
+    section {
+      margin-bottom: 50px;
+      &:last-child {
+        border-bottom: none;
+      }
+      h3 {
+        font-size: 18px;
+        color: #213863;
+        margin: 0 0 20px 0;
+        &::before {
+          content: "■";
+        }
+      }
+      .youtube {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      p {
+        margin: 15px 0 0 0;
+        font-size: 14px;
+      }
+    }
+  }
+  .movie_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &::after {
+      content: "";
+      width: 31%;
+      height: 0;
+    }
+    > * {
+      width: 30%;
+      margin-bottom: 20px;
+      a {
+        color: #000;
+        .thumb {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+        p {
+          margin: 5px 0 0 0;
+          font-size: 14px;
+        }
+        }
+    }
+  }
+}
+
+.notFound {
+  text-align: center;
+  padding: 100px 0;
+}
+
+/* ------------------------------------
+// pager
+----------------------------------- */
+.pager {
+  margin-top: 100px;
+  text-align: center;
+}
+.pager li {
+  display: inline-block;
+  line-height: 1;
+  margin: 0 6px;
+}
+.pager li span.current {
+  background: #213863;
+  border: 1px solid #213863;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  padding: 0.5em 0.4em;
+}
+.pager li a {
+  border: 1px solid #213863;
+  background: #fff;
+  display: inline-block;
+  padding: 0.5em 0.4em;
+  color: #333;
+}
+.pager li a:hover {
+  background: #213863;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .pager {
+    margin-top: 5rem;
+  }
+  .pager li {
+    font-size: 1.6rem;
+    margin: 0 0.5rem;
+  }
+  .pager li span.current {
+    padding: 0.7rem;
+  }
+  .pager li a {
+    padding: 0.7rem;
+  }
+}

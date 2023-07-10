@@ -1,0 +1,411 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.sp_only{display:none;}
+
+body > p{text-indent:2em;}
+
+
+/**************************************************/
+/***********　　　基本タグ設定　　　***************/
+/**************************************************/
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+	/*font-family: Meiryo UI, "メイリオ", "ＭＳ Ｐゴシック", sans-serif;*/
+	font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック", "Yu Gothic", YuGothic, "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+	font-size: 16px;
+
+}
+
+html, body, figure  {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	-webkit-text-size-adjust:100%;
+	line-height: 1.5;
+}
+
+/* ページにスクロールバーを常に表示させる場合 */
+html { overflow-y: scroll; }
+
+/* IE9未満対応 */
+article, aside, figure, figcaption, footer, header, nav, section {
+display: block;
+}
+
+
+/*h1,h2,h3,h4,p,ul,li,strong,div,span,td,th,input,textarea,em,small {
+	font-size: 15px;
+}*/
+
+small {
+	font-size: 14px;
+	text-align:center!important;
+	width:960px;
+	margin:0 auto;
+	clear:both;
+}
+
+a {
+color:#3FA3AB;
+  text-decoration: none;
+}
+a:hover {
+    text-decoration:none;
+}
+a:focus {
+    outline:none;
+}
+
+img {
+	border: none;
+}
+
+/*p {
+  text-align: justify;
+  margin: 0 auto;
+  text-justify: inter-ideograph;
+  font-size:16px;
+  line-height:1.8em;
+  margin-bottom:10px;
+  color:#333;
+}
+
+ul {
+  margin: 0 auto 1.5rem;
+  padding: 0 0 0 2rem;
+}*/
+
+blockquote {
+  background-color: #eeeeee;
+  border: 1px solid #dcdcdc;
+  font-style: italic;
+  padding: 1.4rem;
+}
+
+article {
+  margin: 0 auto 3rem;
+}
+
+section {
+  margin: 0 auto 5rem;
+}
+
+figure img {
+  width: 100%;
+}
+
+
+
+/**************************************************/
+/************　　テンプレート設定　　　************/
+/**************************************************/
+
+/*** old clearfix ***/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* clearfix */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+/* マウスホバー時処理 */
+.alpha {
+  transition: all 0.2s ease 0s;
+}
+.alpha:hover {
+  opacity: 0.5;
+  -ms-filter: "alpha(opacity=50)"; /* IE 8 */
+}
+
+
+/* 全体を包むBOX */
+#wrap {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* ナビゲーション */
+#GNAVI {
+  position: relative;
+  z-index: 100;
+}
+
+
+/* ティザー */
+#TEATHER {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+#TEATHERIMG {
+  position: relative;
+}
+/* ティザータイトル */
+#TEATHER h2#imgTitle {
+  text-align: left;
+  height: inherit;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/* コンテンツ部分 */
+
+#mainContainer {
+	width: 960px;
+	margin: 25px auto;
+	clear: both;
+	display: flex;
+	justify-content: space-between;
+}
+
+#mainContainer #contents{
+	width: 700px;
+}
+#mainContainer #side{
+	width: 230px;
+}
+
+#vi {
+	background-color: #213863;
+}
+#vi .pagetitle {
+	background-image:url(img/main-bg-a.png);
+	background-repeat: no-repeat;
+	min-height: 180px;
+	width: 960px;
+	margin:0 auto;
+	color: #FFF;
+	line-height: 170px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+#vi .pagetitle a {
+	color: #fff;
+}
+
+/* 会員ログイン */
+
+#memberlogin a {
+	display: block;
+	margin: 12px 0;
+	text-align: center;
+}
+
+
+#membermenu {
+	border: 1px solid #CCC;
+	padding: 0 12px;
+}
+
+#membermenu .name {
+	padding: 12px;
+	margin: 0 -12px 10px -12px;
+	color: #FFF;
+	background: #213863;
+	font-size: 16px;
+}
+
+#membermenu .name a {
+	color: #FFF;
+}
+
+#membermenu .logout {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#membermenu .logout a {
+	display: block;
+	padding: 3px 12px;
+	background: #F2F2F2;
+	color: #213863;
+	border: 1px solid #213863;
+	font-size: 12px;
+}
+
+#membermenu ul.menu {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#membermenu ul.menu > li {
+	margin-bottom: 12px;
+	padding-left: 8px;
+	border-left:2px solid #CCC;
+}
+
+#membermenu ul.menu ul {
+	margin: 5px 0 0 14px;
+	padding: 0;
+	list-style: none;
+}
+
+#membermenu ul.menu ul li:before {
+	color: #333;
+	content: "-";
+	display: inline-block;
+	margin-right: 5px;
+}
+
+/* archivelist */
+
+
+#archiveList,#categoryList {
+	border: 1px solid #CCC;
+	padding: 0 12px 12px;
+	margin: 12px 0;
+}
+
+#archiveList h2,#categoryList h2 {
+	padding: 12px;
+	margin: 0 -12px 10px -12px;
+	color: #FFF;
+	background: #213863;
+	font-size: 16px;
+}
+
+#archiveList ul ,#categoryList ul {
+	margin: 5px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+
+#archiveList ul li:before {
+	color: #333;
+	content: "-";
+	display: inline-block;
+	margin-right: 5px;
+}
+
+#categoryList ul li a {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap:0 4px;
+}
+
+#categoryList ul li a span {
+	display: block;
+	width: 12px;
+	height: 12px;
+}
+
+
+
+
+
+
+/*margin*/
+.mt50{
+	margin-top:50px;
+}
+.mt60{
+	margin-top:60px;
+}
+.mt70{
+	margin-top:70px;
+}
+.mt80{
+	margin-top:80px;
+}
+.mt90{
+	margin-top:90px;
+}
+.mt100{
+	margin-top:100px;
+}
+.cb{
+	clear:both;
+}
+
+.ml-10{
+	margin-left:10px;
+}
+
+.title-top{
+	margin:10px 0 20px auto;
+}
+.title-top2{
+	margin:60px 0 20px auto;
+}
+
+ul.bxslider {
+  padding: 0;
+}
+.bx-wrapper .bx-viewport {
+  left: 0;
+  top:80px;
+}
+/* 左右ボタン */
+.bx-wrapper .bx-prev {
+	background: url(/cms/wp-content/themes/officeuemura/img/slider_btn_1.jpg) no-repeat 0 0;
+	display:none;
+}
+.bx-wrapper .bx-next {
+	background: url(/cms/wp-content/themes/officeuemura/img/slider_btn_2.jpg) no-repeat 0 0;
+	display:none;
+}
+.bx-wrapper .bx-controls-direction a {
+	width: 20px;
+	height: 100px;
+}
+.bx-controls-direction {
+  /*margin: 0 auto;
+  overflow: visible;
+  width: 1000px;*/
+  position: relative;
+}
+.bx-wrapper .bx-controls-direction a {
+  height: 120px;
+  width: 30px;
+}
+.bx-wrapper .bx-controls-direction a.bx-prev {
+  left: -55px;
+  top: -330px;
+}
+.bx-wrapper .bx-controls-direction a.bx-next {
+  right: -55px;
+  top: -330px;
+}
+.bx-wrapper .bx-controls-direction a.bx-prev:hover,
+.bx-wrapper .bx-controls-direction a.bx-next:hover {
+	background-position: 0 0;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background-color: #004DA1;
+}
+
